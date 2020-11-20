@@ -15,7 +15,7 @@ Debug Pod for Kubernetes
 
 # Installed Packages (apt)
 
-* [ca-certificates](https://packages.ubuntu.com/focal/cacertificates) `20201027ubuntu0.20.04.1`
+* [ca-certificates](https://packages.ubuntu.com/focal/ca-certificates) `20201027ubuntu0.20.04.1`
 * [curl](https://packages.ubuntu.com/focal/curl) `7.68.0-1ubuntu2.2`
 * [dnsutils](https://packages.ubuntu.com/focal/dnsutils) `1:9.16.1-0ubuntu2.4`
 * [tzdata](https://packages.ubuntu.com/focal/tzdata) `2020d-0ubuntu0.20.04`
