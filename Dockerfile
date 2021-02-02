@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.19.4"
+ENV KUBECTL="1.20.2"
 ENV TZ="Europe/Berlin"
 
 # Instal packages
