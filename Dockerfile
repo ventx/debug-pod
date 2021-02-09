@@ -7,7 +7,7 @@ ENV TZ="Europe/Berlin"
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
   tzdata=2021a-0ubuntu0.20.04 \
-  ca-certificates=20201027ubuntu0.20.04.1 \
+  ca-certificates=20210119~20.04.1 \
   curl=7.68.0-1ubuntu2.4 \
   dnsutils=1:9.16.1-0ubuntu2.4 \
   vim-tiny=2:8.1.2269-1ubuntu5 \
