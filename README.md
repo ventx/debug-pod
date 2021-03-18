@@ -18,7 +18,8 @@ Debug Pod for Kubernetes
 * [ca-certificates](https://packages.ubuntu.com/focal/ca-certificates) `20210119~20.04.1`
 * [curl](https://packages.ubuntu.com/focal/curl) `7.68.0-1ubuntu2.2`
 * [dnsutils](https://packages.ubuntu.com/focal/dnsutils) `1:9.16.1-0ubuntu2.4`
-* [openssh-client](https://packages.ubuntu.com/focal/openssh-client) `1:8.2p1-4ubuntu0.1`
+* [git](https://packages.ubuntu.com/focal/git) `1:2.25.1-1ubuntu3.1`
+* [openssh-client](https://packages.ubuntu.com/focal/openssh-client) `1:8.2p1-4ubuntu0.2`
 * [tzdata](https://packages.ubuntu.com/focal/tzdata) `2020d-0ubuntu0.20.04`
 * [vim-tiny](https://packages.ubuntu.com/focal/vim-tiny) `2:8.1.2269-1ubuntu5`
 * [wget](https://packages.ubuntu.com/focal/wget) `1.20.3-1ubuntu1`
