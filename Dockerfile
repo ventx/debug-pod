@@ -3,20 +3,21 @@ FROM ubuntu:20.04
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.20.7"
+ENV KUBECTL="1.22.4"
 ENV TZ="Europe/Berlin"
 
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  tzdata=2021a-0ubuntu0.20.04 \
+  tzdata=2021e-0ubuntu0.20.04 \
   ca-certificates=20210119~20.04.2 \
   curl=7.68.0-1ubuntu2.7 \
-  dnsutils=1:9.16.1-0ubuntu2.8 \
+  dnsutils=1:9.16.1-0ubuntu2.9 \
   iputils-ping=3:20190709-3 \
+  jq=1.6-1ubuntu0.20.04.1 \
   git=1:2.25.1-1ubuntu3.2 \
   openssh-client=1:8.2p1-4ubuntu0.3 \
-  vim-tiny=2:8.1.2269-1ubuntu5.3 \
-  wget=1.20.3-1ubuntu1 \
+  vim-tiny=2:8.1.2269-1ubuntu5.4 \
+  wget=1.20.3-1ubuntu2 \
   && rm -rf /var/lib/apt/lists/*
 
 # Set Timezone
