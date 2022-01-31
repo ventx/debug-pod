@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.22.4"
+ENV KUBECTL="1.23.3"
 ENV TZ="Europe/Berlin"
 
 # Instal packages
@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   iputils-ping=3:20190709-3 \
   jq=1.6-1ubuntu0.20.04.1 \
   git=1:2.25.1-1ubuntu3.2 \
-  openssh-client=1:8.2p1-4ubuntu0.3 \
-  vim-tiny=2:8.1.2269-1ubuntu5.4 \
+  openssh-client=1:8.2p1-4ubuntu0.4 \
+  vim-tiny=2:8.1.2269-1ubuntu5.6 \
   wget=1.20.3-1ubuntu2 \
   && rm -rf /var/lib/apt/lists/*
 

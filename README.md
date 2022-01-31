@@ -30,13 +30,13 @@ Multi-Arch Debug Pod for Kubernetes
 * [iputils-ping](https://packages.ubuntu.com/focal/iputils-ping) `3:20190709-3`
 * [jq](https://packages.ubuntu.com/focal/jq) `1.6-1ubuntu0.20.04.1`
 * [nmap](https://packages.ubuntu.com/focal/nmap) `7.80+dfsg1-2build1`
-* [openssh-client](https://packages.ubuntu.com/focal/openssh-client) `1:8.2p1-4ubuntu0.3`
+* [openssh-client](https://packages.ubuntu.com/focal/openssh-client) `1:8.2p1-4ubuntu0.4`
 * [tzdata](https://packages.ubuntu.com/focal/tzdata) `2021e-0ubuntu0.20.04`
-* [vim-tiny](https://packages.ubuntu.com/focal/vim-tiny) `2:8.1.2269-1ubuntu5.4`
+* [vim-tiny](https://packages.ubuntu.com/focal/vim-tiny) `2:8.1.2269-1ubuntu5.6`
 * [wget](https://packages.ubuntu.com/focal/wget) `1.20.3-1ubuntu2`
 
 
 ## Installed Packages (go binaries)
 
-* [kubectl](https://github.com/kubernetes/kubectl) `1.22.4`
+* [kubectl](https://github.com/kubernetes/kubectl) `1.23.3`
 
