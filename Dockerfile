@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   iputils-ping=3:20190709-3 \
   jq=1.6-1ubuntu0.20.04.1 \
   git=1:2.25.1-1ubuntu3.4 \
+  nmap=7.80+dfsg1-2build1 \
   openssh-client=1:8.2p1-4ubuntu0.5 \
   vim-tiny=2:8.1.2269-1ubuntu5.7 \
   wget=1.20.3-1ubuntu2 \
