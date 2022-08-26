@@ -3,19 +3,19 @@ FROM ubuntu:20.04
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.23.6"
+ENV KUBECTL="1.23.10"
 ENV TZ="Europe/Berlin"
-ENV YQ="4.25.1"
+ENV YQ="4.27.2"
 
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
   tzdata=2022a-0ubuntu0.20.04 \
-  ca-certificates=20210119~20.04.2 \
-  curl=7.68.0-1ubuntu2.11 \
+  ca-certificates=20211016~20.04.1 \
+  curl=7.68.0-1ubuntu2.12 \
   dnsutils=1:9.16.1-0ubuntu2.10 \
   iputils-ping=3:20190709-3 \
   jq=1.6-1ubuntu0.20.04.1 \
-  git=1:2.25.1-1ubuntu3.4 \
+  git=1:2.25.1-1ubuntu3.5 \
   nmap=7.80+dfsg1-2build1 \
   openssh-client=1:8.2p1-4ubuntu0.5 \
   vim-tiny=2:8.1.2269-1ubuntu5.7 \

@@ -23,10 +23,10 @@ Multi-Arch Debug Pod for Kubernetes
 
 ## Installed Packages (apt)
 
-* [ca-certificates](https://packages.ubuntu.com/focal/ca-certificates) `20210119~20.04.2`
-* [curl](https://packages.ubuntu.com/focal/curl) `7.68.0-1ubuntu2.11`
+* [ca-certificates](https://packages.ubuntu.com/focal/ca-certificates) `20211016~20.04.1`
+* [curl](https://packages.ubuntu.com/focal/curl) `7.68.0-1ubuntu2.12`
 * [dnsutils](https://packages.ubuntu.com/focal/dnsutils) `1:9.16.1-0ubuntu2.10`
-* [git](https://packages.ubuntu.com/focal/git) `1:2.25.1-1ubuntu3.2`
+* [git](https://packages.ubuntu.com/focal/git) `1:2.25.1-1ubuntu3.5`
 * [iputils-ping](https://packages.ubuntu.com/focal/iputils-ping) `3:20190709-3`
 * [jq](https://packages.ubuntu.com/focal/jq) `1.6-1ubuntu0.20.04.1`
 * [nmap](https://packages.ubuntu.com/focal/nmap) `7.80+dfsg1-2build1`
