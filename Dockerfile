@@ -3,22 +3,23 @@ FROM ubuntu:20.04
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.23.10"
+ENV KUBECTL="1.23.13"
 ENV TZ="Europe/Berlin"
-ENV YQ="4.27.2"
+ENV YQ="4.28.2"
 
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  tzdata=2022a-0ubuntu0.20.04 \
+  tzdata=2022c-0ubuntu0.20.04.0 \
   ca-certificates=20211016~20.04.1 \
-  curl=7.68.0-1ubuntu2.12 \
-  dnsutils=1:9.16.1-0ubuntu2.10 \
+  curl=7.68.0-1ubuntu2.13 \
+  dnsutils=1:9.16.1-0ubuntu2.11 \
   iputils-ping=3:20190709-3 \
   jq=1.6-1ubuntu0.20.04.1 \
-  git=1:2.25.1-1ubuntu3.5 \
+  git=1:2.25.1-1ubuntu3.6 \
   nmap=7.80+dfsg1-2build1 \
   openssh-client=1:8.2p1-4ubuntu0.5 \
-  vim-tiny=2:8.1.2269-1ubuntu5.7 \
+  tree=1.8.0-1 \
+  vim-tiny=2:8.1.2269-1ubuntu5.9 \
   wget=1.20.3-1ubuntu2 \
   && rm -rf /var/lib/apt/lists/*
 
