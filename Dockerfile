@@ -1,26 +1,26 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.23.13"
+ENV KUBECTL="1.25.3"
 ENV TZ="Europe/Berlin"
-ENV YQ="4.28.2"
+ENV YQ="4.29.2"
 
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  tzdata=2022c-0ubuntu0.20.04.0 \
-  ca-certificates=20211016~20.04.1 \
-  curl=7.68.0-1ubuntu2.13 \
-  dnsutils=1:9.16.1-0ubuntu2.11 \
-  iputils-ping=3:20190709-3 \
-  jq=1.6-1ubuntu0.20.04.1 \
-  git=1:2.25.1-1ubuntu3.6 \
-  nmap=7.80+dfsg1-2build1 \
-  openssh-client=1:8.2p1-4ubuntu0.5 \
-  tree=1.8.0-1 \
-  vim-tiny=2:8.1.2269-1ubuntu5.9 \
-  wget=1.20.3-1ubuntu2 \
+  tzdata=2022f-0ubuntu0.22.04.0 \
+  ca-certificates=20211016 \
+  curl=7.81.0-1ubuntu1.6 \
+  bind9-dnsutils=1:9.18.1-1ubuntu1.2 \
+  iputils-ping=3:20211215-1 \
+  jq=1.6-2.1ubuntu3 \
+  git=1:2.34.1-1ubuntu1.5 \
+  nmap=7.91+dfsg1+really7.80+dfsg1-2build1 \
+  openssh-client=1:8.9p1-3 \
+  tree=2.0.2-1 \
+  vim-tiny=2:8.2.3995-1ubuntu2.1 \
+  wget=1.21.2-2ubuntu1 \
   && rm -rf /var/lib/apt/lists/*
 
 # Config ca-certificates for wget
