@@ -3,14 +3,14 @@ FROM ubuntu:22.04
 ARG TARGETPLATFORM
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.25.3"
+ENV KUBECTL="1.25.5"
 ENV TZ="Europe/Berlin"
-ENV YQ="4.29.2"
+ENV YQ="4.30.6"
 
 # Instal packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  tzdata=2022f-0ubuntu0.22.04.0 \
-  ca-certificates=20211016 \
+  tzdata=2022g-0ubuntu0.22.04.1 \
+  ca-certificates=20211016ubuntu0.22.04.1 \
   curl=7.81.0-1ubuntu1.6 \
   bind9-dnsutils=1:9.18.1-1ubuntu1.2 \
   iputils-ping=3:20211215-1 \
