@@ -31,6 +31,7 @@ Multi-Arch Debug Pod for Kubernetes
 * [git](https://packages.ubuntu.com/jammy/git)
 * [iputils-ping](https://packages.ubuntu.com/jammy/iputils-ping)
 * [jq](https://packages.ubuntu.com/jammy/jq)
+* [netcat](https://packages.ubuntu.com/jammy/netcat)
 * [nmap](https://packages.ubuntu.com/jammy/nmap)
 * [openssh-client](https://packages.ubuntu.com/jammy/openssh-client)
 * [tree](https://packages.ubuntu.com/jammy/tree)
