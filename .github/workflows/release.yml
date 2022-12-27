@@ -14,3 +14,4 @@ jobs:
         with:
           include-v-in-tag: false
           release-type: simple
+          token: ${{ secrets.PAT_RELEASE_PLEASE }}
