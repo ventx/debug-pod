@@ -19,7 +19,7 @@ LABEL maintainer="Hans Jörg Wieland <hajo@ventx.de>" \
       org.opencontainers.image.vendor="ventx GmbH"
 
 ENV DEBIAN_FRONTEND="noninteractive"
-ENV KUBECTL="1.25.5"
+ENV KUBECTL="1.24.9"
 ENV TZ="Europe/Berlin"
 ENV YQ="4.30.6"
 
