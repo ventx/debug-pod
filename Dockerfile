@@ -48,7 +48,8 @@ RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && \
   dpkg-reconfigure --frontend noninteractive tzdata
 
 # kubectl
-RUN wget -q https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL}/bin/$TARGETPLATFORM/kubectl -O /usr/local/bin/kubectl && \
+RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=linux/amd64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=linux/arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=linux/arm64; else ARCHITECTURE=linux/amd64; fi && \
+  wget -q https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL}/bin/${ARCHITECTURE}/kubectl -O /usr/local/bin/kubectl && \
   chmod +x /usr/local/bin/kubectl
 
 # yq
