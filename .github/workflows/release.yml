@@ -35,6 +35,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
+          flavor: latest=true
           images: ventx/debug-pod
 
       - name: Build and push Docker image
