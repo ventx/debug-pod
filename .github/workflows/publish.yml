@@ -36,7 +36,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           flavor: latest=true
-          images: ventx/debug-pod
+          images: ${GITHUB_REPOSITORY}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
@@ -52,9 +52,16 @@ jobs:
             VERSION=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
 
       - name: Sync Docker Hub README
-        uses: ms-jpq/sync-dockerhub-readme@v1
+        uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ventx/debug-pod
-          readme: "./README.md"
+          repository:  ${GITHUB_REPOSITORY}
+
+      - name: Sync Docker Hub Description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${GITHUB_REPOSITORY}
+          short-description: ${{ github.event.repository.description }}
