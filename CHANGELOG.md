@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/ventx/debug-pod/compare/0.5.0...0.5.1) (2022-12-27)
+
+
+### Bug Fixes
+
+* set kubectl version to 1.24 which is mostly supported on all major clouds (-+2 version skew) ([b99bdef](https://github.com/ventx/debug-pod/commit/b99bdefa7983c1d37f657672dcf77f94c3676232))
+
 ## [0.5.0](https://github.com/ventx/debug-pod/compare/0.4.1...0.5.0) (2022-12-27)
 
 

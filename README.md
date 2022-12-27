@@ -7,7 +7,7 @@ Multi-Arch Debug Pod for Kubernetes
 
 ## Docker Hub
 
-[ventx/debug-pod:0.4.0](https://hub.docker.com/r/ventx/debug-pod) <!-- {x-release-please-version} -->
+[ventx/debug-pod:0.5.1](https://hub.docker.com/r/ventx/debug-pod) <!-- {x-release-please-version} -->
 
 
 ## Docker image
