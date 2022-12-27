@@ -32,7 +32,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           flavor: latest=true
-          images: ${{ env.GITHUB_REPOSITORY }}
+          images: ventx/debug-pod
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
@@ -52,12 +52,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ env.GITHUB_REPOSITORY }}
+          repository: ventx/debug-pod
 
       - name: Sync Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ env.GITHUB_REPOSITORY }}
+          repository: ventx/debug-pod
           short-description: ${{ github.event.repository.description }}
