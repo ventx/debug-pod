@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/ventx/debug-pod/compare/0.4.1...0.5.0) (2022-12-27)
+
+
+### Features
+
+* add less via apt-get ([16495f0](https://github.com/ventx/debug-pod/commit/16495f04ca4872ef772b26ba22af673fd3cb2394))
+
 ## [0.4.1](https://github.com/ventx/debug-pod/compare/0.4.0...0.4.1) (2022-12-27)
 
 
