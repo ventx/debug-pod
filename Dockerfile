@@ -1,6 +1,22 @@
 FROM ubuntu:22.04
 
+ARG BUILDTIME
+ARG REVISION
 ARG TARGETPLATFORM
+ARG VERSION
+
+LABEL maintainer="Hans Jörg Wieland <hajo@ventx.de>" \
+      org.opencontainers.image.authors="Hans Jörg Wieland <hajo@ventx.de>" \
+      org.opencontainers.image.base.name="ubuntu:22.04" \
+      org.opencontainers.image.created="${BUILDTIME}" \
+      org.opencontainers.image.description="Debug Pod for Kubernetes" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.ref.name="ventx/debug-pod" \
+      org.opencontainers.image.revision="${REVISION}" \
+      org.opencontainers.image.source="https://github.com/ventx/debug-pod" \
+      org.opencontainers.image.url="https://github.com/ventx/debug-pod.git" \
+      org.opencontainers.image.version="${VERSION}" \
+      org.opencontainers.image.vendor="ventx GmbH"
 
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV KUBECTL="1.25.5"
