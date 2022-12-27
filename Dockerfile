@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   iputils-ping=3:20211215-1 \
   jq=1.6-2.1ubuntu3 \
   git=1:2.34.1-1ubuntu1.5 \
+  less=590-1build1 \
   netcat=1.218-4ubuntu1 \
   nmap=7.91+dfsg1+really7.80+dfsg1-2build1 \
   openssh-client=1:8.9p1-3 \
