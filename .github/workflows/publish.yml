@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Build / Publish Docker image
 
 on:
   workflow_dispatch:
@@ -9,7 +9,6 @@ on:
 
 jobs:
   push-to-registry:
-    name: Push image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
