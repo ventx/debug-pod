@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.0](https://github.com/ventx/debug-pod/compare/0.5.1...0.6.0) (2023-01-20)
+
+
+### Features
+
+* add httpie, update README ([1db7a19](https://github.com/ventx/debug-pod/commit/1db7a192b72f370f29d967fc8b7086c095899455))
+* add xh, mysql-client and postgresql-client, update legacy apt packages ([93d1696](https://github.com/ventx/debug-pod/commit/93d169697c70676a0104cfa07e9fc805ea193ed3))
+
 ## [0.5.1](https://github.com/ventx/debug-pod/compare/0.5.0...0.5.1) (2022-12-27)
 
 
