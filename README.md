@@ -29,12 +29,15 @@ Multi-Arch Debug Pod for Kubernetes
 * [curl](https://packages.ubuntu.com/jammy/curl)
 * [dnsutils](https://packages.ubuntu.com/jammy/bind9-dnsutils)
 * [git](https://packages.ubuntu.com/jammy/git)
+* [httpie](https://httpie.io)
 * [iputils-ping](https://packages.ubuntu.com/jammy/iputils-ping)
 * [jq](https://packages.ubuntu.com/jammy/jq)
 * [less](https://packages.ubuntu.com/jammy/less)
+* [mysql-client](https://packages.ubuntu.com/jammy/mysql-client)
 * [netcat](https://packages.ubuntu.com/jammy/netcat)
 * [nmap](https://packages.ubuntu.com/jammy/nmap)
 * [openssh-client](https://packages.ubuntu.com/jammy/openssh-client)
+* [postgresql-client](https://packages.ubuntu.com/jammy/postgresql-client)
 * [tree](https://packages.ubuntu.com/jammy/tree)
 * [tzdata](https://packages.ubuntu.com/jammy/tzdata)
 * [vim-tiny](https://packages.ubuntu.com/jammy/vim-tiny)
@@ -46,3 +49,7 @@ Multi-Arch Debug Pod for Kubernetes
 * [kubectl](https://github.com/kubernetes/kubectl)
 * [yq](https://github.com/mikefarah/yq)
 
+
+## Installed Packages (rust binaries)
+
+* [xh](https://github.com/ducaale/xh)
