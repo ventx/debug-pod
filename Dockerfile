@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   iputils-ping=3:20211215-1 \
   jq=1.6-2.1ubuntu3 \
   git=1:2.34.1-1ubuntu1.6 \
+  gnupg=2.2.27-3ubuntu2.1 \
   less=590-1build1 \
   mysql-client=8.0.31-0ubuntu0.22.04.1 \
   netcat=1.218-4ubuntu1 \
@@ -54,20 +55,28 @@ RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && \
 
 # kubectl
 RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=linux/amd64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=linux/arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=linux/arm64; else ARCHITECTURE=linux/amd64; fi && \
-  wget -q https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL}/bin/${ARCHITECTURE}/kubectl -O /usr/local/bin/kubectl && \
+  curl -SsL -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL}/bin/${ARCHITECTURE}/kubectl && \
   chmod +x /usr/local/bin/kubectl
 
 # yq
 RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=amd64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=arm64; else ARCHITECTURE=amd64; fi && \
-  wget -q https://github.com/mikefarah/yq/releases/download/v${YQ}/yq_linux_${ARCHITECTURE} -O /usr/local/bin/yq && \
+  curl -SsL -o /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v${YQ}/yq_linux_${ARCHITECTURE} && \
   chmod +x /usr/local/bin/yq
 
 # xh
 WORKDIR /tmp
 RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=x86_64; elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then ARCHITECTURE=arm; elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then ARCHITECTURE=aarch64; else ARCHITECTURE=x86_64; fi && \
-  wget -q "https://github.com/ducaale/xh/releases/download/v${XH}/xh-v${XH}-${ARCHITECTURE}-unknown-linux-$(if [ $ARCHITECTURE = "arm" ]; then echo "gnueabihf"; else echo "musl"; fi).tar.gz" -O /tmp/xh.tar.gz && \
+  curl -SsL -o /tmp/xh.tar.gz "https://github.com/ducaale/xh/releases/download/v${XH}/xh-v${XH}-${ARCHITECTURE}-unknown-linux-$(if [ $ARCHITECTURE = "arm" ]; then echo "gnueabihf"; else echo "musl"; fi).tar.gz" && \
   tar xfz /tmp/xh.tar.gz && mv /tmp/xh-*/xh /usr/local/bin && \
   rm -rf /tmp/xh*
+
+# httpie
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN curl -SsL https://packages.httpie.io/deb/KEY.gpg | apt-key add - && \
+  curl -SsL -o /etc/apt/sources.list.d/httpie.list https://packages.httpie.io/deb/httpie.list && \
+  apt-get update && \
+  apt-get install httpie=2.6.0-1 -y --no-install-recommends && \
+  rm -rf /var/lib/apt/lists/*
 
 CMD ["kubectl", "version", "--short"]
 

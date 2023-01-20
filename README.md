@@ -29,6 +29,7 @@ Multi-Arch Debug Pod for Kubernetes
 * [curl](https://packages.ubuntu.com/jammy/curl)
 * [dnsutils](https://packages.ubuntu.com/jammy/bind9-dnsutils)
 * [git](https://packages.ubuntu.com/jammy/git)
+* [httpie](https://httpie.io)
 * [iputils-ping](https://packages.ubuntu.com/jammy/iputils-ping)
 * [jq](https://packages.ubuntu.com/jammy/jq)
 * [less](https://packages.ubuntu.com/jammy/less)
