@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/ventx/debug-pod/compare/0.6.0...0.7.0) (2023-06-25)
+
+
+### Features
+
+* version bump of all tools, remove httpie (xh already available) and mysql as postgres should be always the way to go ;) ([4cfba55](https://github.com/ventx/debug-pod/commit/4cfba55f8b71f3e431bbb8e45da1df76714d1008))
+
 ## [0.6.0](https://github.com/ventx/debug-pod/compare/0.5.1...0.6.0) (2023-01-20)
 
 
